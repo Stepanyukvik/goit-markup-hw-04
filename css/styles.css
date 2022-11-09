@@ -379,8 +379,8 @@ ul {
 }
 
 .list-customer .item {
-    /* width: 170px;
-    height: 92px; */
+    width: 170px;
+    height: 92px;
     flex-basis: calc((100% - 150px) / 6);
     background-color: var(--primary-white-color);
     border: 1px solid var(--fill-icons);
@@ -393,13 +393,12 @@ ul {
 }*/
 
 .list-customer .logo-customer {
-    display: flex;
     width: 100%;
     height: 100%;
-
     
-    /* align-items: center;
-    justify-content: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
 
 .list-customer .logo-icon {
@@ -504,25 +503,14 @@ address {
     padding-left: 200px;
 }
 
-.page-footer .box-footer {
+.page-footer .container {
     display: flex;
     flex-direction: column;
-    /* padding-top: 60px;
-    padding-bottom: 60px;
-    padding-left: 215px;
-    padding-right: 0; */
+;
 } 
 
 .container .logo .footer {
     margin-bottom: 20px;
-}
-
-.container.social-address {
-    /* padding-top: 72px;
-    padding-bottom: 100px;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 70px; */
 }
 
 .social-address .go {
