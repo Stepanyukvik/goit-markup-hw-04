@@ -174,6 +174,7 @@ ul {
     max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
+    margin: 0 auto;
  
     background-color: var(--primary-text-color);
     text-align: center;
@@ -495,18 +496,23 @@ address {
 }
 
 .page-footer {
-    display: flex;
+    /* display: flex;
     align-items: baseline;
-    justify-content:center;
+    justify-content:center; */
     padding-top: 60px;
     padding-bottom: 60px;
-    padding-left: 200px;
 }
 
 .page-footer .container {
     display: flex;
+    align-items: baseline;
+    /* justify-content:center; */
+}
+
+.page-footer .box-footer {
+    display: flex;
     flex-direction: column;
-;
+    margin-right: 70px;
 } 
 
 .container .logo .footer {
