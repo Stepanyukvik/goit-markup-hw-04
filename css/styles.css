@@ -7,6 +7,7 @@
     --background-color:#F5F4FA;
     --border-color:#EEEEEE;
     --fill-icons: #AFB1B8;
+    --timing-fuction: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -117,6 +118,21 @@ ul {
 }
 .site-nav .link.current {
     color: var(--accent-color);
+    position: relative;
+}
+
+.site-nav .link.current::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--accent-color);
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+   
 }
 
 /* Auth-nav */
@@ -536,10 +552,6 @@ address {
 }
 
 .icon-address .list-address {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -547,11 +559,19 @@ address {
 
     margin-right: 10px;
 }
-
 .icon-address .list-address:last-child {
     margin-right: 0;
 }
 
+.icon-address .icons-footer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 
 .list-address .icons-footer {
     color: var(--primary-white-color);
 }
@@ -561,16 +581,16 @@ address {
 }
 .list-address .social-footer {
     fill: currentColor;
-}
+} */
 
 .icon-address .list-address:hover, 
 .icon-address .list-address:focus {
     background-color: var(--accent-color);
 }
-
+/* 
 .icon-address .icons-footer:focus {
     background-color: var(--accent-color);
-}
+} */
 
 
 
@@ -674,3 +694,35 @@ img {
 .page-link .link:focus {
    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); 
 } 
+
+.page-link .item {
+    position: relative;
+    /* overflow: hidden; */
+}
+
+
+.window {
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    color: var(--primary-white-color);
+    background-color: rgba(33, 150, 243, 0.9);
+    opacity: 0; 
+    position: absolute;
+    width: 370px;
+    height: 294px;
+    top:0;
+    padding: 63px 24px 56px 24px;
+   
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.page-link .item:hover .window {
+    opacity: 1;
+    transform: translateY(0);
+    
+}
