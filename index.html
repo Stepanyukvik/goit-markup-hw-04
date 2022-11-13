@@ -50,7 +50,7 @@
             <section class="section-title section">
                 <div class="container">
                     <h1 class="hero">Ефективні рішення для<br> вашого бізнесу</h1>
-                    <button type="button" class="button studio">
+                    <button data-modal-open type="button" class="button studio">
                     Замовити послугу
                     </button>
                 </div>
@@ -110,12 +110,15 @@
                     <ul class="images">
                         <li class="item">
                             <img src="./images/box1.jpg" alt="Жіночі_руки_на_клавіатурі_працюють_на_ПК" width="370">
+                            <div class="work-deskription">Десктопні додатки</div>
                         </li>
                         <li class="item">
                             <img src="./images/box2.jpg" alt="Жіночі_руки_з_мобільним_телефоном_та_ноутбуком" width="370">
+                            <div class="work-deskription">Мобільні додатки</div>
                         </li>
                         <li class="item">
                             <img src="./images/box3.jpg" alt="Жіночі_руки_з_планшетом" width="370">
+                            <div class="work-deskription">Дизайнерські рішення</div>
                         </li>
                     </ul>    
                 </div>
@@ -386,5 +389,15 @@
         
        
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="close-sign" data-modal-close>
+                <svg class="icon-close" width="18" height="18">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
